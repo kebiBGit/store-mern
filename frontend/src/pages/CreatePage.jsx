@@ -33,9 +33,10 @@ const CreatePage = () => {
 
     setNewProduct({ name: "", price: "", image: "" });
   };
+  const popup = window.confirm("Are you sure you want to delete this product?");
 
   return (
-    <Container maxW={"container.sm"}>
+    <Container maxW={"container.sm"} py={10}>
       <VStack spacing={8}>
         <Heading as={"h1"} size={"2xl"} textAlign={"center"} mb={8}>
           Create New Product
@@ -43,7 +44,7 @@ const CreatePage = () => {
 
         <Box
           w={"full"}
-          bg={useColorModeValue("white", "gray.800")}
+          bg={useColorModeValue("gray.100", "gray.700")}
           p={6}
           rounded={"lg"}
           shadow={"md"}
@@ -69,6 +70,7 @@ const CreatePage = () => {
             <Input
               placeholder="Image URL"
               name="image"
+              type="url"
               value={newProduct.image}
               onChange={(e) =>
                 setNewProduct({ ...newProduct, image: e.target.value })

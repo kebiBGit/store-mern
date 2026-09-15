@@ -3,6 +3,7 @@ import {
   Container,
   Flex,
   HStack,
+  Divider,
   Text,
   useColorMode,
 } from "@chakra-ui/react";
@@ -13,7 +14,7 @@ const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Container maxW={"1920px"} px={4}>
+    <Container maxW={"1140px"} mx={"auto"} px={4}>
       <Flex
         h={16}
         alignItems={"center"}
@@ -44,9 +45,8 @@ const Navbar = () => {
             {colorMode === "light" ? <FaMoon /> : <FaSun />}
           </Button>
         </HStack>
-
-        <Text></Text>
       </Flex>
+      <Divider height="1px" bg="gray.400" />
     </Container>
   );
 };
