@@ -33,7 +33,6 @@ const CreatePage = () => {
 
     setNewProduct({ name: "", price: "", image: "" });
   };
-  const popup = window.confirm("Are you sure you want to delete this product?");
 
   return (
     <Container maxW={"container.sm"} py={10}>
